@@ -1,0 +1,19 @@
+{set title="Ошибка"}
+{use class="Yii"}
+{use class="yii\helpers\Url"}
+{use class="yii\helpers\Html"}
+<section aria-label="about" class="whitepage no-bottom" id="about">
+    <div class="container">
+        <div class="row">
+            <div class="site-error text-center m-3 p-3">
+                <h1>{Html::encode($this->title)}</h1>
+                <div class="alert alert-primary">
+                    {nl2br(Html::encode($message))}
+                </div>
+                <p class="alert">
+                    <a href="{Yii::$app->homeUrl}" class="btn"> Go home </a>
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
